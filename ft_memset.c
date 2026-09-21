@@ -1,28 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                       :::      ::::::::    */
-/*   ft_memset.c                                       :+:      :+:    :+:    */
-/*                                                   +:+ +:+         +:+      */
-/*   By: username <username@student.42tokyo.jp>    #+#  +:+       +#+         */
-/*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/09/21 01:22:51 by username         #+#    #+#              */
-/*   Updated: 2026/09/21 01:42:51 by username        ###   ########.fr        */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: absafi <absafi@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/09/21 10:25:26 by username          #+#    #+#             */
+/*   Updated: 2026/09/21 18:14:59 by absafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *start_area_pointer, int filler_byte, size_t number_of_bytes)
+void	*ft_memset(void *start, int byte, size_t num)
 {
-	unsigned char	*char_area_pointer = start_area_pointer;
+	unsigned char	*char_area_pointer;
 
-	while (start_area_pointer && number_of_bytes > 0)
+	char_area_pointer = start;
+	if (start)
 	{
-		*char_area_pointer = filler_byte;
-		number_of_bytes--;
-		char_area_pointer++;
+		while (num > 0)
+		{
+			*char_area_pointer = byte;
+			num--;
+			char_area_pointer++;
+		}
 	}
-	return (start_area_pointer);
+	return (start);
 }
 /*
 #include <stdio.h>
@@ -30,11 +34,9 @@ void	*ft_memset(void *start_area_pointer, int filler_byte, size_t number_of_byte
 
 int	main(void)
 {
-char	str1[50] = "La la land";
-char	str2[50] = "La la land";
 
-printf("mine: %s\n", (char *) ft_memset(str1, -2, 4));
-printf("original: %s\n", (char *) memset(str2, -2, 4));
+printf("mine: %s\n", (char *) ft_memset(str1, 'd', 4));
+printf("original: %s\n", (char *) memset(str2, 'd', 4));
 return (0);
 }
 */
