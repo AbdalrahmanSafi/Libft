@@ -6,7 +6,7 @@
 /*   By: absafi <absafi@student.42amman.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/23 21:26:12 by absafi            #+#    #+#             */
-/*   Updated: 2026/09/24 11:48:26 by absafi           ###   ########.fr       */
+/*   Updated: 2026/09/24 15:54:42 by absafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_calloc(size_t n, size_t size)
 		cal_buf = malloc(1);
 		if (!cal_buf)
 		{
-			return (NULL);
+			return (0);
 		}
 		*cal_buf = 0;
 		return (cal_buf);
