@@ -6,7 +6,7 @@
 /*   By: absafi <absafi@student.42amman.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/21 10:10:34 by absafi            #+#    #+#             */
-/*   Updated: 2026/09/22 10:48:57 by absafi           ###   ########.fr       */
+/*   Updated: 2026/09/23 18:05:30 by absafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t num)
 
 	temp_src = (unsigned char *) src;
 	temp_dest = (unsigned char *) dest;
-	while (temp_src && num > 0)
+	while (num > 0)
 	{
 		*temp_dest = *temp_src;
 		temp_dest++;

@@ -6,13 +6,13 @@
 /*   By: absafi <absafi@student.42amman.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/20 22:31:23 by absafi            #+#    #+#             */
-/*   Updated: 2026/09/22 10:48:48 by absafi           ###   ########.fr       */
+/*   Updated: 2026/09/24 11:49:49 by absafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(char *string)
+size_t	ft_strlen(const char *string)
 {
 	size_t	counter;
 

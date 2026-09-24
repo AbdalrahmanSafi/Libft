@@ -6,7 +6,7 @@
 /*   By: absafi <absafi@student.42amman.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/21 16:02:39 by absafi            #+#    #+#             */
-/*   Updated: 2026/09/22 10:48:55 by absafi           ###   ########.fr       */
+/*   Updated: 2026/09/24 11:48:53 by absafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,24 +14,35 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t num)
 {
-	char	buffer[1];
-	size_t	buf_size;
+	unsigned char	*temp_src;
+	unsigned char	*temp_dest;
 
-	buf_size = ft_strlen(((char *) src));
-	ft_memcpy(buffer, (char *) src, buf_size);
-	return (ft_memcpy(dest, buffer, buf_size));
+	if (dest >= src)
+	{
+		return (ft_memcpy(dest, src, num));
+	}
+	temp_dest = (unsigned char *)(dest + num - 1);
+	temp_src = (unsigned char *)(src + num - 1);
+	while (num > 0)
+	{
+		*temp_dest = *temp_src;
+		temp_dest--;
+		temp_src--;
+		num--;
+	}
+	return (dest);
 }
 /*
 #include <stdio.h>
 #include <string.h>
-
 int	main(void)
-{
+{				   d s
 char	src[50] = "Abdelrahman";
-char	src2[50] = "Abdelrahman";
+char	src2[50] = "Abde";
+"Abde"
 
-printf("mine: %s\n", (char *) ft_memmove(src, "Ahmad", 4));
-printf("original: %s\n", (char *) memmove(src, "Ahmad", 4));
+printf("mine: %s\n", (char *) ft_memmove(&src[1], (const char *) & src[4], 4));
+printf("original: %s\n", (char *) memmove(&src[1], (const char *) & src[4], 4));
 return (0);
 }
 */

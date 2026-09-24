@@ -6,23 +6,11 @@
 /*   By: absafi <absafi@student.42amman.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/21 16:30:09 by absafi            #+#    #+#             */
-/*   Updated: 2026/09/22 10:48:51 by absafi           ###   ########.fr       */
+/*   Updated: 2026/09/24 11:49:45 by absafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static size_t	const_strlen(const char *string)
-{
-	size_t	counter;
-
-	counter = 0;
-	while (string[counter])
-	{
-		counter++;
-	}
-	return (counter);
-}
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 {
@@ -38,7 +26,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t size)
 		}
 		dest[counter] = '\0';
 	}
-	return (const_strlen(src));
+	return (ft_strlen(src));
 }
 /*
 #include <bsd/string.h>
