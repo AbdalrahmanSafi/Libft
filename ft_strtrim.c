@@ -6,12 +6,11 @@
 /*   By: absafi <absafi@student.42amman.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/24 15:04:05 by absafi            #+#    #+#             */
-/*   Updated: 2026/09/24 16:35:53 by absafi           ###   ########.fr       */
+/*   Updated: 2026/09/24 18:49:35 by absafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int	is_in_set(const char *set, char current_char)
 {
@@ -41,26 +40,30 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return ((char *) s1);
 	}
 	while (s1[src_count] && is_in_set(set, s1[src_count]))
+	{
 		src_count++;
+	}
 	start = src_count;
-	src_count = ft_strlen(s1);
+	src_count = ft_strlen(s1) - 1;
 	while (start != src_count && is_in_set(set, s1[src_count]))
 	{
 		src_count--;
 	}
-	buffer = malloc(src_count - start + 1);
+	buffer = malloc(src_count - start + 2);
 	if (!buffer)
 		return (0);
-	ft_strlcpy(buffer, &s1[start], src_count - start + 1);
+	ft_strlcpy(buffer, &s1[start], (src_count - start + 2));
 	return (buffer);
 }
-
+/*
+#include <stdio.h>
 int	main(void)
 {
-	char	*buffer;
+char	*buffer;
 
-	buffer = ft_strtrim("ann an lao ann", "ann");
-	printf("%s", buffer);
-	free(buffer);
-	return (0);
+buffer = ft_strtrim("anng\nan lao 2\nann", "ann");
+printf("%s\n", buffer);
+free(buffer);
+return (0);
 }
+*/

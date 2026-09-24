@@ -6,7 +6,7 @@
 /*   By: absafi <absafi@student.42amman.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/21 00:53:21 by absafi            #+#    #+#             */
-/*   Updated: 2026/09/24 15:53:41 by absafi           ###   ########.fr       */
+/*   Updated: 2026/09/24 18:52:04 by absafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,5 +42,5 @@ char	*ft_strdup(const char *s);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
-
+char	**ft_split(char const *s, char c);
 #endif
