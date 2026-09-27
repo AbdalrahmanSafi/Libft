@@ -6,7 +6,7 @@
 /*   By: absafi <absafi@student.42amman.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/23 12:51:28 by absafi            #+#    #+#             */
-/*   Updated: 2026/09/23 17:28:29 by absafi           ###   ########.fr       */
+/*   Updated: 2026/09/25 12:05:46 by absafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	ptr = (unsigned char *) s;
 	while (counter < n)
 	{
-		if (*ptr == c)
+		if (*ptr == (unsigned char) c)
 		{
 			return (ptr);
 		}

@@ -6,65 +6,31 @@
 /*   By: absafi <absafi@student.42amman.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/23 15:20:05 by absafi            #+#    #+#             */
-/*   Updated: 2026/09/23 17:28:44 by absafi           ###   ########.fr       */
+/*   Updated: 2026/09/27 04:34:16 by absafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	compair(const char *str1, const char *str2, size_t num)
-{
-	size_t	count;
-
-	if (num == 0)
-		return (0);
-	count = 0;
-	while (count < num - 1 && str1[count] == str2[count] && str1[count])
-	{
-		count++;
-	}
-	if (!str2[count])
-	{
-		return (0);
-	}
-	return (str1[count] - str2[count]);
-}
-
-static long long	first_sim(char *src, char goal, size_t n)
-{
-	size_t	counter;
-
-	counter = 0;
-	while (counter < n - 1 && src[counter])
-	{
-		if (src[counter] == goal)
-		{
-			return ((long long)(counter) + 1);
-		}
-		counter++;
-	}
-	return (-1);
-}
-
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
-	long long	ind;
-	char		*temp_big;
-	long long	dumb;
+	size_t	b_ind;
+	size_t	l_ind;
 
-	temp_big = (char *) big;
-	if (!little)
-		return (temp_big);
-	ind = first_sim((char *) & big[0], *(char *) little, len);
-	dumb = 0;
-	while (ind < (long long)(len - 1) && dumb != -1)
+	if (!*little)
+		return ((char *) big);
+	b_ind = 0;
+	while (b_ind < len && big[b_ind])
 	{
-		ind += dumb;
-		if (!compair((char *) & big[ind], (char *) little, (len - ind)))
+		l_ind = 0;
+		while ((b_ind + l_ind) < len && little[l_ind]
+				&& big[b_ind + l_ind] == little[l_ind])
 		{
-			return (&temp_big[ind]);
+			l_ind++;
 		}
-		dumb = first_sim(&temp_big[ind + 1], *(char *) little, (size_t)(len - ind));
+		if (!little[l_ind])
+			return ((char *) & big[b_ind]);
+		b_ind++;
 	}
 	return (0);
 }

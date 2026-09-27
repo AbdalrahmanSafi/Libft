@@ -6,7 +6,7 @@
 /*   By: absafi <absafi@student.42amman.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/24 18:50:56 by absafi            #+#    #+#             */
-/*   Updated: 2026/09/25 00:52:30 by absafi           ###   ########.fr       */
+/*   Updated: 2026/09/25 19:08:18 by absafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,15 +97,16 @@ char	**ft_split(char const *s, char c)
 	result[counter] = 0;
 	return (result);
 }
-
+/*
 #include <stdio.h>
 
 int	main(void)
 {
-	char	**ch = ft_split("  b d dd l   ", ' ');
+char	**ch = ft_split("  b d dd l   ", ' ');
 
-	printf("%s\n", ch[0]);
-	printf("%s\n", ch[1]);
-	printf("%s\n", ch[2]);
-	printf("%s\n", ch[3]);
+printf("%s\n", ch[0]);
+printf("%s\n", ch[1]);
+printf("%s\n", ch[2]);
+printf("%s\n", ch[3]);
 }
+*/

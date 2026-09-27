@@ -6,7 +6,7 @@
 /*   By: absafi <absafi@student.42amman.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 11:15:37 by absafi            #+#    #+#             */
-/*   Updated: 2026/09/22 17:00:56 by absafi           ###   ########.fr       */
+/*   Updated: 2026/09/25 11:58:05 by absafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,13 @@
 
 char	*ft_strchr(const char *src, int goal_char)
 {
-	unsigned char	*temp;
-
-	temp = (unsigned char *) & goal_char;
-	if (*temp == '\0')
+	while ((unsigned char)*src != (unsigned char) goal_char)
 	{
-		return ((char *) temp);
-	}
-	while (*src)
-	{
-		if (*src == goal_char)
-		{
-			return ((char *) src);
-		}
+		if (*src == '\0')
+			return (0);
 		src++;
 	}
-	return (0);
+	return ((char *) src);
 }
 /*
 

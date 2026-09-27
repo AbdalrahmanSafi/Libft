@@ -6,7 +6,7 @@
 /*   By: absafi <absafi@student.42amman.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/23 17:29:02 by absafi            #+#    #+#             */
-/*   Updated: 2026/09/23 18:13:24 by absafi           ###   ########.fr       */
+/*   Updated: 2026/09/27 04:44:11 by absafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ int	ft_atoi(const char *nptr)
 		sign = -1;
 		counter++;
 	}
+	else if (nptr[counter] == '+')
+		counter++;
 	while (ft_isdigit(nptr[counter]))
 	{
 		value = (value * 10) + (nptr[counter] - '0');
