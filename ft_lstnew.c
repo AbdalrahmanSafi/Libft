@@ -6,7 +6,7 @@
 /*   By: absafi <absafi@student.42amman.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/26 13:00:52 by absafi            #+#    #+#             */
-/*   Updated: 2026/09/26 13:29:55 by absafi           ###   ########.fr       */
+/*   Updated: 2026/09/27 11:38:55 by absafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ int	main(void)
 t_list	*node = ft_lstnew("head");
 
 node->next = ft_lstnew("tail");
-printf("node.content %s\nnode.next->content %s\n", (char *) node->content, (char *) node->next->content);
 free(node->next);
 free(node);
 return (0);

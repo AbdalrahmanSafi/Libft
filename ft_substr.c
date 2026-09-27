@@ -6,27 +6,32 @@
 /*   By: absafi <absafi@student.42amman.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/24 11:55:38 by absafi            #+#    #+#             */
-/*   Updated: 2026/09/27 05:01:24 by absafi           ###   ########.fr       */
+/*   Updated: 2026/09/27 14:24:25 by absafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*buffer;
+	size_t	src_size;
 
-	buffer = malloc(len + 2);
+	src_size = ft_strlen(s);
+	if (start > src_size)
+		return (0);
+	if (len > src_size - start)
+		len = src_size - start;
+	buffer = malloc(len + 1);
 	if (!buffer)
 	{
 		return (0);
 	}
-	ft_strlcpy(buffer, &s[start], len + 2);
+	ft_strlcpy(buffer, &s[start], len + 1);
 	return (buffer);
 }
 /*
-#include <stdio.h>
-
 int	main(void)
 {
 char	src[] = "La laland";

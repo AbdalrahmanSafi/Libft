@@ -6,7 +6,7 @@
 /*   By: absafi <absafi@student.42amman.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/23 15:20:05 by absafi            #+#    #+#             */
-/*   Updated: 2026/09/27 04:34:16 by absafi           ###   ########.fr       */
+/*   Updated: 2026/09/27 11:40:56 by absafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	{
 		l_ind = 0;
 		while ((b_ind + l_ind) < len && little[l_ind]
-				&& big[b_ind + l_ind] == little[l_ind])
+			&& big[b_ind + l_ind] == little[l_ind])
 		{
 			l_ind++;
 		}
