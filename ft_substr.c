@@ -6,7 +6,7 @@
 /*   By: absafi <absafi@student.42amman.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/24 11:55:38 by absafi            #+#    #+#             */
-/*   Updated: 2026/09/27 14:24:25 by absafi           ###   ########.fr       */
+/*   Updated: 2026/09/27 20:47:13 by absafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,13 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	src_size = ft_strlen(s);
 	if (start > src_size)
-		return (0);
+	{
+		buffer = malloc(1);
+		if (!buffer)
+			return (0);
+		*buffer = 0;
+		return (buffer);
+	}
 	if (len > src_size - start)
 		len = src_size - start;
 	buffer = malloc(len + 1);
@@ -34,7 +40,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 /*
 int	main(void)
 {
-char	src[] = "La laland";
+char	src[] = "";
 
 printf("%s\n", ft_substr(src, 2, 3));
 return (0);
