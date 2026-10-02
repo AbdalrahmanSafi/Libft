@@ -6,7 +6,7 @@
 /*   By: absafi <absafi@student.42amman.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/26 13:31:51 by absafi            #+#    #+#             */
-/*   Updated: 2026/09/26 13:56:24 by absafi           ###   ########.fr       */
+/*   Updated: 2026/10/02 16:55:49 by absafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
+	if (!new || !lst)
+		return ;
 	new->next = *lst;
 	*lst = new;
 }

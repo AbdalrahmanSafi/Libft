@@ -6,7 +6,7 @@
 /*   By: absafi <absafi@student.42amman.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/26 21:25:32 by absafi            #+#    #+#             */
-/*   Updated: 2026/09/26 21:55:59 by absafi           ###   ########.fr       */
+/*   Updated: 2026/10/02 16:57:51 by absafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 {
 	t_list	*last;
 
+	if (!new || !lst)
+		return ;
 	last = ft_lstlast(*lst);
 	if (!last)
 	{

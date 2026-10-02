@@ -6,7 +6,7 @@
 /*   By: absafi <absafi@student.42amman.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/27 03:21:17 by absafi            #+#    #+#             */
-/*   Updated: 2026/09/27 04:05:13 by absafi           ###   ########.fr       */
+/*   Updated: 2026/10/02 17:01:22 by absafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 	t_list	*temp_new;
 	void	*content;
 
+	if (!lst || !f || !del)
+		return (0);
 	new = 0;
 	while (lst)
 	{

@@ -6,13 +6,11 @@
 /*   By: absafi <absafi@student.42amman.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/23 17:29:02 by absafi            #+#    #+#             */
-/*   Updated: 2026/09/27 04:44:11 by absafi           ###   ########.fr       */
+/*   Updated: 2026/10/02 16:12:06 by absafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <stdlib.h>
 
 static int	ft_isspace(char c)
 {
@@ -21,17 +19,15 @@ static int	ft_isspace(char c)
 
 int	ft_atoi(const char *nptr)
 {
-	int	value;
-	int	sign;
-	int	counter;
+	long long	value;
+	int			sign;
+	int			counter;
 
 	sign = 1;
 	value = 0;
 	counter = 0;
 	while (ft_isspace(nptr[counter]))
-	{
 		counter++;
-	}
 	if (nptr[counter] == '-')
 	{
 		sign = -1;
@@ -44,13 +40,15 @@ int	ft_atoi(const char *nptr)
 		value = (value * 10) + (nptr[counter] - '0');
 		counter++;
 	}
-	return (sign * value);
+	return ((int)(sign * value));
 }
 /*
+#include <stdio.h>
+
 int	main(void)
 {
-printf("mine: %d\n", ft_atoi("\r \t--9"));
-printf("original: %d\n", atoi("\r \t--9"));
+printf("mine: %d\n", ft_atoi("\r \t-2147483648"));
+printf("original: %d\n", atoi("\r \t-2147483648"));
 return (0);
 }
 */

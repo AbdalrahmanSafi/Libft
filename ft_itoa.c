@@ -6,7 +6,7 @@
 /*   By: absafi <absafi@student.42amman.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/25 18:18:11 by absafi            #+#    #+#             */
-/*   Updated: 2026/09/25 20:03:08 by absafi           ###   ########.fr       */
+/*   Updated: 2026/10/02 16:45:01 by absafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ static size_t	res_size(int n)
 
 char	*ft_itoa(int n)
 {
-	int		size;
+	size_t	size;
 	char	*result;
 
 	size = res_size(n);

@@ -6,7 +6,7 @@
 /*   By: absafi <absafi@student.42amman.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/21 16:02:39 by absafi            #+#    #+#             */
-/*   Updated: 2026/09/25 12:03:00 by absafi           ###   ########.fr       */
+/*   Updated: 2026/10/02 22:20:30 by absafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,12 @@ void	*ft_memmove(void *dest, const void *src, size_t num)
 	unsigned char	*temp_src;
 	unsigned char	*temp_dest;
 
-	if (dest < src)
+	if (num == 0)
+		return (dest);
+	if ((unsigned char *) dest < (unsigned char *) src)
 	{
 		return (ft_memcpy(dest, src, num));
 	}
-	if (num == 0)
-		return (dest);
 	temp_dest = ((unsigned char *) dest) + num - 1;
 	temp_src = ((unsigned char *) src) + num - 1;
 	while (num > 0)
