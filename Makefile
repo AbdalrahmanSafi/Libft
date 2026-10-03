@@ -54,14 +54,11 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 	
-# compile *.c without linker (-c), and get them in .o extension
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 	rm -f $(OBJS)
-# rebuild all, (delete *.o files, then remake them)
 fclean: clean
 	rm -f $(NAME)
-# rebuild all, (delete *.o files, then remake them)
 re: fclean all
