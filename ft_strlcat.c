@@ -6,7 +6,7 @@
 /*   By: absafi <absafi@student.42amman.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 01:15:40 by absafi            #+#    #+#             */
-/*   Updated: 2026/09/25 18:00:06 by absafi           ###   ########.fr       */
+/*   Updated: 2026/10/04 00:50:51 by absafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,10 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dsize)
 	size_t	src_size;
 
 	src_size = ft_strlen(src);
-	dst_size = ft_strlen(dst);
-	if (dsize <= dst_size)
+	dst_size = 0;
+	while (dst_size < dsize && dst[dst_size])
+		dst_size++;
+	if (dst_size == dsize)
 		return (dsize + src_size);
 	ft_strlcpy(&dst[dst_size], src, dsize - dst_size);
 	return (dst_size + src_size);

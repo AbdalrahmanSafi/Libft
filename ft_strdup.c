@@ -6,7 +6,7 @@
 /*   By: absafi <absafi@student.42amman.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/23 22:10:13 by absafi            #+#    #+#             */
-/*   Updated: 2026/09/30 11:42:22 by absafi           ###   ########.fr       */
+/*   Updated: 2026/10/03 22:40:05 by absafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,6 @@ char	*ft_strdup(const char *s)
 	buffer = (char *) malloc(size + 1);
 	if (!buffer)
 		return (0);
-	if (buffer)
-	{
-		ft_strlcpy(buffer, s, size + 1);
-	}
+	ft_strlcpy(buffer, s, size + 1);
 	return (buffer);
 }

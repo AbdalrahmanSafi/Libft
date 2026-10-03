@@ -6,7 +6,7 @@
 /*   By: absafi <absafi@student.42amman.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/24 15:04:05 by absafi            #+#    #+#             */
-/*   Updated: 2026/09/27 04:51:01 by absafi           ###   ########.fr       */
+/*   Updated: 2026/10/04 01:22:06 by absafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,25 +36,22 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	src_count = 0;
 	if (!s1 || !set)
-	{
 		return ((char *) s1);
-	}
 	while (s1[src_count] && is_in_set(set, s1[src_count]))
-	{
 		src_count++;
-	}
 	start = src_count;
+	if (s1[start] == '\0')
+		return (ft_strdup(""));
 	src_count = ft_strlen(s1) - 1;
 	while (start < src_count && is_in_set(set, s1[src_count]))
-	{
 		src_count--;
-	}
 	buffer = malloc(src_count - start + 2);
 	if (!buffer)
 		return (0);
 	ft_strlcpy(buffer, &s1[start], (src_count - start + 2));
 	return (buffer);
 }
+
 /*
 #include <stdio.h>
 int	main(void)
