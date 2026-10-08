@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: absafi <absafi@student.42amman.com>        +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/22 11:15:37 by absafi            #+#    #+#             */
-/*   Updated: 2026/09/25 11:58:05 by absafi           ###   ########.fr       */
+/*                                                       :::      ::::::::    */
+/*   ft_strchr.c                                       :+:      :+:    :+:    */
+/*                                                   +:+ +:+         +:+      */
+/*   By: absafi <absafi@student.42amman.com>       #+#  +:+       +#+         */
+/*                                               +#+#+#+#+#+   +#+            */
+/*   Created: 2026/09/22 11:15:37 by absafi           #+#    #+#              */
+/*   Updated: 2026/10/07 00:43:35 by absafi          ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strchr(const char *src, int goal_char)
 {
-	while ((unsigned char)*src != (unsigned char) goal_char)
+	while ((char)*src != (char) goal_char)
 	{
 		if (*src == '\0')
 			return (0);
