@@ -6,7 +6,7 @@
 /*   By: absafi <absafi@student.42amman.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/21 16:30:09 by absafi            #+#    #+#             */
-/*   Updated: 2026/09/24 11:49:45 by absafi           ###   ########.fr       */
+/*   Updated: 2026/10/09 19:51:10 by absafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,7 @@ char	dest1[] = "La la land";
 char	dest2[] = "La la land";
 int		wished_size1 = ft_strlcpy(dest1, "Today is 21/9/2026", 18);
 int		wished_size2 = strlcpy(dest2, "Today is 21/9/2026", 18);
+
 return (0);
 }
 */

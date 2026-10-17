@@ -6,7 +6,7 @@
 /*   By: absafi <absafi@student.42amman.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/25 22:35:07 by absafi            #+#    #+#             */
-/*   Updated: 2026/09/25 22:49:08 by absafi           ###   ########.fr       */
+/*   Updated: 2026/10/09 19:38:12 by absafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	unsigned int	counter;
 
+	if (!s || !f)
+		return ;
 	counter = 0;
 	while (s[counter])
 	{

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: absafi <absafi@student.42amman.com>        +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/24 15:04:05 by absafi            #+#    #+#             */
-/*   Updated: 2026/10/04 01:22:06 by absafi           ###   ########.fr       */
+/*                                                       :::      ::::::::    */
+/*   ft_strtrim.c                                      :+:      :+:    :+:    */
+/*                                                   +:+ +:+         +:+      */
+/*   By: absafi <absafi@student.42amman.com>       #+#  +:+       +#+         */
+/*                                               +#+#+#+#+#+   +#+            */
+/*   Created: 2026/09/24 15:04:05 by absafi           #+#    #+#              */
+/*   Updated: 2026/10/17 04:15:09 by absafi          ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	src_count = 0;
 	if (!s1 || !set)
-		return ((char *) s1);
+		return (0);
 	while (s1[src_count] && is_in_set(set, s1[src_count]))
 		src_count++;
 	start = src_count;
@@ -53,7 +53,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 }
 
 /*
+
 #include <stdio.h>
+
 int	main(void)
 {
 char	*buffer;

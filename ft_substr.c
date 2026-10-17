@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                       :::      ::::::::    */
-/*   ft_substr.c                                       :+:      :+:    :+:    */
-/*                                                   +:+ +:+         +:+      */
-/*   By: absafi <absafi@student.42amman.com>       #+#  +:+       +#+         */
-/*                                               +#+#+#+#+#+   +#+            */
-/*   Created: 2026/09/24 11:55:38 by absafi           #+#    #+#              */
-/*   Updated: 2026/10/04 22:29:32 by absafi          ###   ########.fr        */
+/*                                                        :::      ::::::::   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: absafi <absafi@student.42amman.com>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/09/24 11:55:38 by absafi            #+#    #+#             */
+/*   Updated: 2026/10/09 20:31:31 by absafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*buffer;
 	size_t	src_size;
 
+	if (!s)
+		return (0);
 	src_size = ft_strlen(s);
 	if (start > src_size)
 	{
@@ -37,6 +39,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	return (buffer);
 }
 /*
+#include <stdio.h>
+
 int	main(void)
 {
 char	src[] = "";

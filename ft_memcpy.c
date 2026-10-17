@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: absafi <absafi@student.42amman.com>        +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/21 10:10:34 by absafi            #+#    #+#             */
-/*   Updated: 2026/09/23 18:05:30 by absafi           ###   ########.fr       */
+/*                                                       :::      ::::::::    */
+/*   ft_memcpy.c                                       :+:      :+:    :+:    */
+/*                                                   +:+ +:+         +:+      */
+/*   By: absafi <absafi@student.42amman.com>       #+#  +:+       +#+         */
+/*                                               +#+#+#+#+#+   +#+            */
+/*   Created: 2026/09/21 10:10:34 by absafi           #+#    #+#              */
+/*   Updated: 2026/10/17 04:02:06 by absafi          ###   ########.fr        */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t num)
 {
-	unsigned char	*temp_src;
-	unsigned char	*temp_dest;
+	const unsigned char	*temp_src;
+	unsigned char		*temp_dest;
 
-	temp_src = (unsigned char *) src;
+	temp_src = (const unsigned char *) src;
 	temp_dest = (unsigned char *) dest;
 	while (num > 0)
 	{

@@ -6,7 +6,7 @@
 /*   By: absafi <absafi@student.42amman.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/25 22:08:48 by absafi            #+#    #+#             */
-/*   Updated: 2026/09/25 22:44:21 by absafi           ###   ########.fr       */
+/*   Updated: 2026/10/09 20:19:32 by absafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char			*buffer;
 	size_t			buf_size;
 
+	if (!s || !f)
+		return (0);
 	buf_size = ft_strlen(s);
 	buffer = malloc(buf_size + 1);
 	if (!buffer)

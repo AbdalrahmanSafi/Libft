@@ -6,7 +6,7 @@
 /*   By: absafi <absafi@student.42amman.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/23 17:29:02 by absafi            #+#    #+#             */
-/*   Updated: 2026/10/02 16:12:06 by absafi           ###   ########.fr       */
+/*   Updated: 2026/10/09 22:13:21 by absafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,8 @@ int	ft_atoi(const char *nptr)
 
 int	main(void)
 {
-printf("mine: %d\n", ft_atoi("\r \t-2147483648"));
-printf("original: %d\n", atoi("\r \t-2147483648"));
+printf("mine: %d\n", ft_atoi("-31474836481"));
+printf("original: %d\n", atoi("-31474836481"));
 return (0);
 }
 */
