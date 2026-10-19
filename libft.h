@@ -6,7 +6,7 @@
 /*   By: absafi <absafi@student.42amman.com>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/21 00:53:21 by absafi            #+#    #+#             */
-/*   Updated: 2026/10/04 12:53:52 by absafi           ###   ########.fr       */
+/*   Updated: 2026/10/19 08:58:31 by absafi           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 # include <stddef.h>
 # include <unistd.h>
 # include <stdlib.h>
-# include <stdint.h>
 
 typedef struct s_list
 {
